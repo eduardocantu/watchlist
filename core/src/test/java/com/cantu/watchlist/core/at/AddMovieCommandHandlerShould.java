@@ -1,7 +1,7 @@
 package com.cantu.watchlist.core.at;
 
-import com.cantu.watchlist.core.application.CreateMovieCommand;
-import com.cantu.watchlist.core.application.CreateMovieCommandHandler;
+import com.cantu.watchlist.core.application.addMovie.AddMovieCommand;
+import com.cantu.watchlist.core.application.addMovie.AddMovieCommandHandler;
 import com.cantu.watchlist.core.domain.MovieBuilder;
 import com.cantu.watchlist.core.domain.MovieIdBuilder;
 import com.cantu.watchlist.core.domain.MovieRepositoryInMemory;
@@ -9,16 +9,16 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CreateMovieCommandHandlerShould {
+public class AddMovieCommandHandlerShould {
 
     @Test
     public void addANewMovieWhenCommanded() {
         final MovieRepositoryInMemory movieRepository = new MovieRepositoryInMemory();
 
-        final CreateMovieCommandHandler commandHandler = new CreateMovieCommandHandler(movieRepository);
+        final AddMovieCommandHandler commandHandler = new AddMovieCommandHandler(movieRepository);
 
         commandHandler.handle(
-                new CreateMovieCommand("Lord of the Rings", "1234")
+                new AddMovieCommand("Lord of the Rings", "1234")
         );
 
         assertEquals(

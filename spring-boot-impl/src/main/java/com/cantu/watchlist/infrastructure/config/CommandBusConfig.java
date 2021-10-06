@@ -1,6 +1,6 @@
 package com.cantu.watchlist.infrastructure.config;
 
-import com.cantu.watchlist.core.application.CreateMovieCommandHandler;
+import com.cantu.watchlist.core.application.addMovie.AddMovieCommandHandler;
 import com.cantu.watchlist.core.domain.MovieRepository;
 import com.cantu.watchlist.infrastructure.CommandBus;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ public class CommandBusConfig {
     public CommandBus commandBus() {
         CommandBus commandBus = new CommandBus();
         commandBus.registerHandler(
-                new CreateMovieCommandHandler(movieRepository)
+                new AddMovieCommandHandler(movieRepository)
         );
         return commandBus;
     }

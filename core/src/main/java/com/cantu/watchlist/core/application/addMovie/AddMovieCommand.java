@@ -1,13 +1,13 @@
-package com.cantu.watchlist.core.application;
+package com.cantu.watchlist.core.application.addMovie;
 
 import com.cantu.watchlist.infrastructure.Command;
 
-public class CreateMovieCommand implements Command {
+public class AddMovieCommand implements Command {
 
     private final String name;
     private final String imdb;
 
-    public CreateMovieCommand(final String name, final String imdb) {
+    public AddMovieCommand(final String name, final String imdb) {
         this.name = name;
         this.imdb = imdb;
     }

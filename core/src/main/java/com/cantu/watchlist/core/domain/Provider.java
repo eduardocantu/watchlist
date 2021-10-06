@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Provider {
+public class Provider implements Entity<String> {
 
-    private String name;
-    private List<Movie> availableMovies;
+    private final ProviderName name;
+    private final List<Movie> availableMovies;
 
-    protected Provider(final String name) {
+    protected Provider(final ProviderName name) {
         this.name = name;
         this.availableMovies = new ArrayList<>();
     }
@@ -20,5 +20,10 @@ public class Provider {
 
     public List<Movie> getAvailableMovies() {
         return Collections.unmodifiableList(availableMovies);
+    }
+
+    @Override
+    public String getId() {
+        return name.get();
     }
 }

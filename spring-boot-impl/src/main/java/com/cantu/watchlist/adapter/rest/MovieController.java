@@ -1,10 +1,9 @@
 package com.cantu.watchlist.adapter.rest;
 
-import com.cantu.watchlist.adapter.rest.dto.CreateMovieCommandMapper;
-import com.cantu.watchlist.adapter.rest.dto.CreateMovieRequestBody;
+import com.cantu.watchlist.adapter.rest.dto.AddMovieCommandMapper;
+import com.cantu.watchlist.adapter.rest.dto.AddMovieRequestBody;
 import com.cantu.watchlist.infrastructure.CommandBus;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,9 +18,9 @@ public class MovieController {
             method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE
     )
-    public String create(@RequestBody CreateMovieRequestBody requestBody) {
+    public String create(@RequestBody AddMovieRequestBody requestBody) {
         commandBus.push(
-                new CreateMovieCommandMapper()
+                new AddMovieCommandMapper()
                         .apply(requestBody)
         );
 

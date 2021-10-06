@@ -16,6 +16,11 @@ public class ProviderBuilder {
     }
 
     public Provider build() {
-        return new Provider(name);
+        return new Provider(
+                ProviderNameBuilder
+                        .aProviderNameBuilder()
+                        .withName(name)
+                        .build()
+        );
     }
 }

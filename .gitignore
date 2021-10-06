@@ -1,0 +1,5 @@
+/.idea/
+/core/target/
+/infrastructure/target/
+/spring-boot-impl/target/
+/watchlist.iml

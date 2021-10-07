@@ -21,5 +21,8 @@ A SpringBoot application that implement the adapters.
 The application is served inside a docker image which could be delivered inside a docker container together with postgre:
 
 - Inside the module "spring-boot-impl", run:
--- docker build -t cantu/watchlist .
--- docker-compose up
+
+```
+docker build -t cantu/watchlist .
+docker-compose up
+```

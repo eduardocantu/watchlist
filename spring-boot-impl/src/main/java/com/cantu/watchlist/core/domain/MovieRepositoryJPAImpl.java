@@ -16,11 +16,14 @@ public class MovieRepositoryJPAImpl implements MovieRepository {
     private MovieRepositoryJPA jpaRepository;
 
     @Override
-    public void save(Movie entity) {
-        jpaRepository.save(
-                new FromMovieMapper()
-                        .apply(entity)
-        );
+    public Movie save(Movie entity) {
+        return new ToMovieMapper()
+                .apply(
+                        jpaRepository.save(
+                                new FromMovieMapper()
+                                        .apply(entity)
+                        )
+                );
     }
 
     @Override

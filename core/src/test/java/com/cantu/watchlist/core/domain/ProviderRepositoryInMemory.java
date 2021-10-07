@@ -14,8 +14,9 @@ public class ProviderRepositoryInMemory implements ProviderRepository {
     }
 
     @Override
-    public void save(Provider entity) {
+    public Provider save(Provider entity) {
         providers.put(entity.getId(), entity);
+        return entity;
     }
 
     @Override

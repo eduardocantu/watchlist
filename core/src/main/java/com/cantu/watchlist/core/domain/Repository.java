@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface Repository<K extends Entity> {
 
-    void save(K entity);
+    K save(K entity);
 
     K findById(EntityId id);
 

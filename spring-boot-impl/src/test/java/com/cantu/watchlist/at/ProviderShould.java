@@ -2,6 +2,7 @@ package com.cantu.watchlist.at;
 
 import com.cantu.watchlist.WatchListSpringBootApplication;
 import com.cantu.watchlist.at.dto.Movie;
+import com.cantu.watchlist.at.dto.Provider;
 import com.cantu.watchlist.at.lib.HttpUtils;
 import com.cantu.watchlist.at.lib.JSONConverter;
 import com.cantu.watchlist.config.H2JpaConfig;
@@ -16,11 +17,12 @@ import org.springframework.http.HttpEntity;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest(classes = {WatchListSpringBootApplication.class, H2JpaConfig.class},
         webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
 )
-public class MovieShould {
+public class ProviderShould {
 
     @LocalServerPort
     private int port;
@@ -30,16 +32,15 @@ public class MovieShould {
 
     @Test
     public void beAddedWhenRequested() throws Exception {
-        final String movieName = UUID.randomUUID().toString();
-        final String movieImdb = UUID.randomUUID().toString();
+        final String providerName = UUID.randomUUID().toString();
 
         final JSONObject requestBody = JSONConverter.toJSON(
-                new Movie(movieName, movieImdb)
+                new Provider(providerName)
         );
 
         final HttpEntity<String> response = restTemplate
                 .postForEntity(
-                        HttpUtils.getURI(port, "movies"),
+                        HttpUtils.getURI(port, "providers"),
                         HttpUtils.getRequestFor(requestBody),
                         String.class
                 );
@@ -50,13 +51,9 @@ public class MovieShould {
         final JSONObject responseBody = new JSONObject(response.getBody());
 
         assertEquals(
-                movieName,
-                responseBody.get("movie")
+                providerName,
+                responseBody.get("name")
         );
 
-        assertEquals(
-                movieImdb,
-                responseBody.get("imdb")
-        );
     }
 }

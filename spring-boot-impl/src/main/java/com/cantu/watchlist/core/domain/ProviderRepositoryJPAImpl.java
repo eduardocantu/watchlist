@@ -17,11 +17,14 @@ public class ProviderRepositoryJPAImpl implements ProviderRepository {
     private ProviderRepositoryJPA jpaRepository;
 
     @Override
-    public void save(Provider provider) {
-        jpaRepository.save(
-                new FromProviderMapper()
-                        .apply(provider)
-        );
+    public Provider save(Provider provider) {
+        return new ToProviderMapper()
+                .apply(
+                        jpaRepository.save(
+                                new FromProviderMapper()
+                                        .apply(provider)
+                        )
+                );
     }
 
     @Override

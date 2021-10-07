@@ -6,8 +6,10 @@ import com.cantu.watchlist.core.domain.MovieRepository;
 import com.cantu.watchlist.core.domain.ProviderRepository;
 import com.cantu.watchlist.infrastructure.CommandBus;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class CommandBusConfig {
@@ -19,6 +21,7 @@ public class CommandBusConfig {
     private ProviderRepository providerRepository;
 
     @Bean
+    @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
     public CommandBus commandBus() {
         CommandBus commandBus = new CommandBus();
 

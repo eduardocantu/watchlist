@@ -14,8 +14,9 @@ public class MovieRepositoryInMemory implements MovieRepository {
     }
 
     @Override
-    public void save(Movie entity) {
+    public Movie save(Movie entity) {
         movies.put(entity.getId(), entity);
+        return entity;
     }
 
     @Override

@@ -16,14 +16,14 @@ public final class CommandBus {
         commandsHandlers.put(getCommandFromHandler(handler), handler);
     }
 
-    public void push(Command command) {
+    public CommandResponse push(Command command) {
         if (!commandsHandlers.containsKey(command.getClass())) {
             throw new RuntimeException(
                     String.format("No handler for command [%s].",
                             command.getClass().getName()));
         }
 
-        commandsHandlers.get(command.getClass()).handle(command);
+        return commandsHandlers.get(command.getClass()).handle(command);
     }
 
     private Class getCommandFromHandler(CommandHandler handler) {

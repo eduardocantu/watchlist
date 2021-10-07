@@ -5,6 +5,7 @@ import com.cantu.watchlist.infrastructure.CommandBus;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class CommandBusShould {
 
@@ -16,8 +17,8 @@ public class CommandBusShould {
         commandBus.registerHandler(commandHanlder);
 
         final Command command = new MockCommand();
-        commandBus.push(command);
 
+        assertNotNull(commandBus.push(command).getResponse());
         assertEquals(command, commandHanlder.getHandledCommand());
     }
 

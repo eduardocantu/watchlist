@@ -17,8 +17,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.cantu.watchlist</groupId>
-            <artifactId>infrastructure</artifactId>
+            <groupId>com.cantu</groupId>
+            <artifactId>ddd-framework</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>

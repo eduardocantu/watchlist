@@ -1,5 +1,7 @@
 package com.cantu.watchlist.core.domain;
 
+import com.cantu.ddd.framework.domain.Entity;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

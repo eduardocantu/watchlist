@@ -1,11 +1,10 @@
 package com.cantu.watchlist.core.at.application.addMovie;
 
+import com.cantu.ddd.framework.command.CommandResponse;
 import com.cantu.watchlist.core.application.addMovie.AddMovieCommand;
 import com.cantu.watchlist.core.application.addMovie.AddMovieCommandHandler;
-import com.cantu.watchlist.core.domain.MovieBuilder;
 import com.cantu.watchlist.core.domain.MovieIdBuilder;
 import com.cantu.watchlist.core.domain.MovieRepositoryInMemory;
-import com.cantu.watchlist.infrastructure.CommandResponse;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

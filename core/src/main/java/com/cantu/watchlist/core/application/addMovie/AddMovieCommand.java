@@ -1,6 +1,7 @@
 package com.cantu.watchlist.core.application.addMovie;
 
-import com.cantu.watchlist.infrastructure.Command;
+
+import com.cantu.ddd.framework.command.Command;
 
 public class AddMovieCommand implements Command {
 

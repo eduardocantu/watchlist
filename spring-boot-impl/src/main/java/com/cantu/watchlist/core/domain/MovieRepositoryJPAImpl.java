@@ -1,5 +1,6 @@
 package com.cantu.watchlist.core.domain;
 
+import com.cantu.ddd.framework.domain.EntityId;
 import com.cantu.watchlist.core.domain.mapper.FromMovieMapper;
 import com.cantu.watchlist.core.domain.mapper.ToMovieMapper;
 import org.springframework.beans.factory.annotation.Autowired;

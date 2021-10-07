@@ -23,7 +23,6 @@
     </properties>
 
     <modules>
-        <module>infrastructure</module>
         <module>core</module>
         <module>spring-boot-impl</module>
     </modules>

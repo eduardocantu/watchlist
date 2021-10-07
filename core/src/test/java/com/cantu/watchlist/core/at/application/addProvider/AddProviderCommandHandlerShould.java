@@ -1,9 +1,9 @@
 package com.cantu.watchlist.core.at.application.addProvider;
 
+import com.cantu.ddd.framework.command.CommandResponse;
 import com.cantu.watchlist.core.application.addProvider.AddProviderCommand;
 import com.cantu.watchlist.core.application.addProvider.AddProviderCommandHandler;
 import com.cantu.watchlist.core.domain.*;
-import com.cantu.watchlist.infrastructure.CommandResponse;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

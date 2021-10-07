@@ -1,5 +1,7 @@
 package com.cantu.watchlist.core.domain;
 
+import com.cantu.ddd.framework.domain.Entity;
+
 import java.util.Objects;
 
 public class Movie implements Entity<MovieId> {

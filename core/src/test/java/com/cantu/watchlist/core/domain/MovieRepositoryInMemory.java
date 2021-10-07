@@ -1,5 +1,7 @@
 package com.cantu.watchlist.core.domain;
 
+import com.cantu.ddd.framework.domain.EntityId;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

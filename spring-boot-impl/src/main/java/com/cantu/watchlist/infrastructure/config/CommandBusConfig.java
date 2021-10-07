@@ -1,10 +1,11 @@
 package com.cantu.watchlist.infrastructure.config;
 
+import com.cantu.ddd.framework.command.CommandBus;
 import com.cantu.watchlist.core.application.addMovie.AddMovieCommandHandler;
 import com.cantu.watchlist.core.application.addProvider.AddProviderCommandHandler;
 import com.cantu.watchlist.core.domain.MovieRepository;
 import com.cantu.watchlist.core.domain.ProviderRepository;
-import com.cantu.watchlist.infrastructure.CommandBus;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;

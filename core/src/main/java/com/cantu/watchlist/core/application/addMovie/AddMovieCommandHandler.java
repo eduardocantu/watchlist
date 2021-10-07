@@ -1,9 +1,9 @@
 package com.cantu.watchlist.core.application.addMovie;
 
+import com.cantu.ddd.framework.command.CommandHandler;
+import com.cantu.ddd.framework.command.CommandResponse;
 import com.cantu.watchlist.core.domain.MovieBuilder;
 import com.cantu.watchlist.core.domain.MovieRepository;
-import com.cantu.watchlist.infrastructure.CommandHandler;
-import com.cantu.watchlist.infrastructure.CommandResponse;
 
 public class AddMovieCommandHandler implements CommandHandler<AddMovieCommand> {
 

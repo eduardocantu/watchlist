@@ -1,9 +1,9 @@
 package com.cantu.watchlist.core.application.addProvider;
 
+import com.cantu.ddd.framework.command.CommandHandler;
+import com.cantu.ddd.framework.command.CommandResponse;
 import com.cantu.watchlist.core.domain.ProviderBuilder;
 import com.cantu.watchlist.core.domain.ProviderRepository;
-import com.cantu.watchlist.infrastructure.CommandHandler;
-import com.cantu.watchlist.infrastructure.CommandResponse;
 
 public class AddProviderCommandHandler implements CommandHandler<AddProviderCommand> {
 

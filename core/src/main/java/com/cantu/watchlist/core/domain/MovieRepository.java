@@ -1,4 +1,6 @@
 package com.cantu.watchlist.core.domain;
 
-public interface MovieRepository extends Repository<Movie>{
+import com.cantu.ddd.framework.domain.Repository;
+
+public interface MovieRepository extends Repository<Movie> {
 }

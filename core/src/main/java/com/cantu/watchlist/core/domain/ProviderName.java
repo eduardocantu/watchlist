@@ -1,5 +1,7 @@
 package com.cantu.watchlist.core.domain;
 
+import com.cantu.ddd.framework.domain.EntityId;
+
 import java.util.Objects;
 
 public class ProviderName implements EntityId<String> {

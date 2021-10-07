@@ -1,11 +1,11 @@
 package com.cantu.watchlist.adapter.rest;
 
+import com.cantu.ddd.framework.command.CommandBus;
+import com.cantu.ddd.framework.command.CommandResponse;
 import com.cantu.watchlist.adapter.rest.dto.AddMovieCommandMapper;
 import com.cantu.watchlist.adapter.rest.dto.AddMovieRequestBody;
 import com.cantu.watchlist.adapter.rest.dto.AddMovieResponseBody;
 import com.cantu.watchlist.core.domain.Movie;
-import com.cantu.watchlist.infrastructure.CommandBus;
-import com.cantu.watchlist.infrastructure.CommandResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

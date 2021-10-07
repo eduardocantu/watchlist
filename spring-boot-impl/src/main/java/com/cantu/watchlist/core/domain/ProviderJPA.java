@@ -5,25 +5,18 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "MOVIE")
-public class MovieJPA {
+@Table(name = "PROVIDER")
+public class ProviderJPA {
 
     @Id
-    private final String id;
-
     private final String name;
 
-    public MovieJPA() {
-        this(null, null);
+    public ProviderJPA() {
+        this(null);
     }
 
-    public MovieJPA(String id, String name) {
-        this.id = id;
+    public ProviderJPA(String name) {
         this.name = name;
-    }
-
-    public String getId() {
-        return id;
     }
 
     public String getName() {

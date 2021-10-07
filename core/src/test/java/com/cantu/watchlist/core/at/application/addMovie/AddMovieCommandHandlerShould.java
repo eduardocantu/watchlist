@@ -1,4 +1,4 @@
-package com.cantu.watchlist.core.at;
+package com.cantu.watchlist.core.at.application.addMovie;
 
 import com.cantu.watchlist.core.application.addMovie.AddMovieCommand;
 import com.cantu.watchlist.core.application.addMovie.AddMovieCommandHandler;

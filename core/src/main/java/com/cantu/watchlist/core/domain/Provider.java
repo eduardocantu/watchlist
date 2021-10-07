@@ -3,8 +3,9 @@ package com.cantu.watchlist.core.domain;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
-public class Provider implements Entity<String> {
+public class Provider implements Entity<ProviderName> {
 
     private final ProviderName name;
     private final List<Movie> availableMovies;
@@ -23,7 +24,20 @@ public class Provider implements Entity<String> {
     }
 
     @Override
-    public String getId() {
-        return name.get();
+    public ProviderName getId() {
+        return name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Provider)) return false;
+        Provider provider = (Provider) o;
+        return name.equals(provider.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 }

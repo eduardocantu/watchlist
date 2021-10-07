@@ -1,4 +1,4 @@
-package com.cantu.watchlist.core.at;
+package com.cantu.watchlist.core.at.domain;
 
 import com.cantu.watchlist.core.domain.*;
 import org.junit.jupiter.api.Test;

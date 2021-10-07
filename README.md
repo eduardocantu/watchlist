@@ -6,11 +6,7 @@ The core domain of the application.
 
 ### core
 
-Where the domain actually lies (aggregates, entities, value objects, services, etc)
-
-### infrastructure
-
-The needed boiler plate code to apply the wanted patterns.
+Where the domain actually lies (aggregates, entities, value objects, services, etc).Z
 
 ### spring-boot-impl
 

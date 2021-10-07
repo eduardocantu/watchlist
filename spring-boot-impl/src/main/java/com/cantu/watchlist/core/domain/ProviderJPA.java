@@ -15,7 +15,7 @@ public class ProviderJPA {
         this(null);
     }
 
-    public ProviderJPA(String name) {
+    public ProviderJPA(final String name) {
         this.name = name;
     }
 

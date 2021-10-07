@@ -4,7 +4,7 @@ services:
   app:
     ports:
       - "8080:8080"
-    image: 'cantu:watchlist'
+    image: 'watchlist/core:latest'
     build:
       context: .
     container_name: app

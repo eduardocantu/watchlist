@@ -23,6 +23,5 @@ The application is served inside a docker image which could be delivered inside 
 - Inside the module "spring-boot-impl", run:
 
 ```
-docker build -t cantu/watchlist .
 docker-compose up
 ```
